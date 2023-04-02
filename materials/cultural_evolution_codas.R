@@ -12,9 +12,7 @@
 library(dplyr)
 library(poweRlaw)
 
-load(file="pacific_coda_identity.Rdata")
-
-pacific_coda_data <- pacific_coda_data %>%
+pacific_coda_data <- load(file="pacific_coda_identity.Rdata") %>%
   filter(!is.na(coda_type)) # exclude unknown coda types
 
 ###### 1. Preparing & plotting rank frequency distributions for each clan ######
